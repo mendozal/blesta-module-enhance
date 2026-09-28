@@ -776,7 +776,15 @@ class Enhance extends Module
         // Return all the service fields
         $encrypted_fields = ['password'];
         $return = [];
-        $fields = ['domain', 'username', 'password', 'website_id', 'customer_email'];
+        $fields = [
+            'domain',
+            'username',
+            'password',
+            'website_id',
+            'customer_email',
+            'customer_org_id',
+            'subscription_id'
+        ];
         foreach ($fields as $field) {
             if (isset($vars[$field]) || isset($service_fields->{$field})) {
                 $return[] = [
